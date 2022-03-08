@@ -1,0 +1,207 @@
+::before,
+::after,
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  height: 100px;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #74b807;
+}
+
+.logo {
+  width: 100px;
+  height: 98px;
+}
+
+nav form {
+  display: flex;
+}
+
+.row {
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+li {
+  list-style-type: none;
+  padding: 0px 20px;
+}
+
+.menu-style {
+  text-decoration: none;
+  color: black;
+  transition: 0.4s;
+}
+
+.menu-style:hover {
+  color: white;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "container ..";
+}
+
+section {
+  padding-bottom: 100px;
+}
+
+.scroll {
+  scroll-margin-top: 110px;
+}
+
+.texte {
+  padding-top: 10px;
+}
+
+aside {
+  position: fixed;
+  right: 0;
+  width: 25%;
+  padding: 10px 20px 0;
+}
+
+.best-articles {
+  padding: 2px 5px;
+  width: 100%;
+  height: 230px;
+  border: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+h3 {
+  padding-top: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.liens-articles {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.liens {
+  color: black;
+  transition: 0.5s;
+  padding: 6px 6px;
+}
+
+.liens:hover {
+  opacity: 0.5;
+}
+
+.gif {
+  width: 145%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+}
+
+.giphy {
+  display: none;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  border: 1px solid black;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.mentions {
+  color: black;
+}
+
+.copyright {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  aside {
+    position: unset;
+    width: 100%;
+  }
+
+  .best-articles {
+    text-align: center;
+  }
+
+  .gif {
+    width: 105%;
+    text-align: center;
+    transform: translateX(-38%);
+  }
+
+  #name {
+    padding-right: 9px;
+  }
+
+  input#name,
+  input#mail {
+    width: 275px;
+  }
+
+  .mailto {
+    margin-left: 35px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .best-articles {
+    height: 260px;
+  }
+}
